@@ -1,0 +1,100 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Indicações</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body id="body-tag">
+	<header>	
+		<nav>
+			<div class="menu-hamb" id="menu-hamb" style="display: block;">
+				<img src="./svg/menu-hamb.svg" alt="Menu">
+			</div>
+			<input type="text" class="search" name="filtro" id="filtro" onchange="filter(filtro)" placeholder="Pesquisar...">
+			
+				<div class="btn-options theme" onclick="theme(image)" id="theme-container"> <img src="./svg/sun.svg" id="image" alt="Tema"  style="left: 0px;"> </div>
+		</nav>
+	</header>
+	<main>
+		<div class="container desktop" id="container">
+			<p class="legend" id="legend" style="">CARDS</p>
+			<div class="cards" id="group0" style="opacity: 1; position: relative; right: auto">
+				<img src="./svg/tresgeracoes.png" alt="Cartao Três Gerações">
+				<img src="./svg/ateliedobiscoito.png" alt="Cartao Ateliê do Biscoito">
+			</div>
+			
+			<div class="navigation">	
+				<div class="arrow" id="prev" onclick="prevcard()"> <img src="./svg/prev.svg" alt="Voltar cartões"> </div>
+					<input type="radio" id="input0" name="group" value="group0" onchange="change(input0)" checked>
+				<div class="arrow" id="next" onclick="nextcard()"> <img src="./svg/next.svg" alt="Mostrar mais cartões"> </div>
+			</div>
+		</div>
+
+		<div class="container mobile-cards pad" id="container">
+			<p class="legend" id="legend" style="">CARDS</p>
+			<div class="cards" id="groupmobile" onscroll="inscroll(groupmobile)" style="opacity: 1; position: relative; right: auto; left: 0px">
+				<img src="./svg/tresgeracoes.png" alt="Logoimagem três gerações">
+				<img src="./svg/ateliedobiscoito.png" alt="Logoimagem ateliê do biscoito">
+			</div>
+				<div class="prevcard-mobile" id="prevmobile" onclick="scrool(groupmobile, 'prev')" style="opacity: 0;"> <img src="./svg/prev.svg"> </div>
+				<div class="nextcard-mobile" onclick="scrool(groupmobile, 'next')" style="opacity: 1;"> <img src="./svg/next.svg"> </div>
+			
+		</div>
+
+		<div class="container pad" id="container">
+			<p class="legend" id="legend" style="">IMPULSIONADOS</p>
+			<div class=" medium cards" style="opacity: 1; position: relative; right: auto">
+				<div class="medium-card">
+					<div class="card-title logo">
+						<img src="./svg/tresgeracoes-logo.png">
+					</div>
+					<div class="card-description">
+						<p>Pães sob encomenda</p>
+					</div>
+				</div>
+				<div class="medium-card">
+					<div class="card-title logo">
+						<img src="./svg/ateliedobiscoito-logo.png">
+					</div>
+					<div class="card-description">
+						<p>Biscoitos artesanais personalizados</p>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+
+		<div class="container pad" id="container">
+			<p class="legend" id="legend" style="">EMPRESAS</p>
+			<div class="cards list" style="opacity: 1; position: relative; right: auto">
+				<div class="small-card">
+					<div class="card-title">
+						<h4>Três Gerações</h4>
+					</div>
+					<div class="card-description">
+						<p>Pães sob encomenda</p>
+					</div>
+				</div>
+				<div class="small-card">
+					<div class="card-title">
+						<h4>Ateliê do Biscoito</h4>
+					</div>
+					<div class="card-description">
+						<p>Biscoitos artesanais personalizados</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</main>
+	
+
+	
+</body>
+</html>
