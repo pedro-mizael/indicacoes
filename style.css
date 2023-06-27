@@ -226,8 +226,9 @@ main .medium-card{
 	font-size: 20px;
 	border-radius: 20px;
 	color: white;
-	background-color: #4A9943;
+	background-color: #373839;
 	opacity: 98%;
+	box-shadow: 0px 0px 6px 2px #00000040;
 }
 
 main .medium-card:hover, .medium-card p:hover{
@@ -267,14 +268,14 @@ main .small-card{
 	display: flex;
 	border-radius: 10px;
 	color: white;
-	background-color: gray;
+	background-color: #85878B;
 	width: 180px;
 	height: 80px;
 	overflow: auto;
 }
 
 main .card-title{
-	width: 100%;
+	width: 60%;
 	height: 100%;
 	padding: 10px;
 	font-size: 14px;
@@ -282,6 +283,7 @@ main .card-title{
 }
 
 main .card-description{
+	width: 100%;
 	padding: 10px;
 	opacity: 95%;
 	font-size: 12px;
@@ -424,7 +426,7 @@ main .card-description{
 
 	main .list{
 		justify-content: center;
-		gap: 5px;
+		gap: 8px;
 		padding: 30px 0px;
 	}
 	main .medium img{
@@ -432,7 +434,7 @@ main .card-description{
 	}
 
 	main .logo{
-		max-width: 50%;
+		min-width: 100px;
 	}
 
 	main .small-card{
@@ -451,6 +453,11 @@ main .card-description{
 	}
 }
 
+@media (max-width: 370px){
+	main .small-card{
+		width: 100%;
+	}
+}
 
 
 @media (orientation: landscape) {
