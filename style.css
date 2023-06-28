@@ -9,6 +9,7 @@
 
 * ::-webkit-scrollbar {
 	width: 3px;
+	height: 3px;
 }
 
 * ::-webkit-scrollbar-track{
@@ -25,6 +26,11 @@ body{
 	display: flex;
 	flex-direction: column;
 	background-color: #D9D9D9;
+}
+
+a{
+	text-decoration: none;
+	color: white;
 }
 
 header{
@@ -219,6 +225,7 @@ main .medium{
 }
 
 main .medium-card{
+	position: relative;
 	display: flex;
 	width: 100%;
 	height: 100px;
@@ -229,6 +236,26 @@ main .medium-card{
 	background-color: #373839;
 	opacity: 98%;
 	box-shadow: 0px 0px 6px 2px #00000040;
+}
+
+main .medium-card .card-description{
+	justify-self: flex-start;
+	width: 70%;
+
+}
+
+main .medium-card .card-days{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	font-size: 12px;
+	color: lightgray;
+	right: 0px;
+	top: 0;
+	padding: 15px;
 }
 
 main .medium-card:hover, .medium-card p:hover{
@@ -262,19 +289,31 @@ main .list{
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 20px;
+	position: relative;
 }
 
 main .small-card{
 	display: flex;
 	border-radius: 10px;
 	color: white;
-	background-color: #85878B;
+	background-color: #373839;
 	width: 180px;
-	height: 80px;
-	overflow: auto;
+	height: 100px;
+	transition: all ease 1s;
+	flex-grow: 1;
+	overflow: hidden;
 }
 
+
+main .list input{
+	display: none;
+}
+
+
 main .card-title{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 60%;
 	height: 100%;
 	padding: 10px;
@@ -282,13 +321,40 @@ main .card-title{
 	border-radius: 10px 0px 0px 10px;
 }
 
+main .card-title h4{
+	font-size: 14px;
+	color: white;
+}
+
 main .card-description{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 100%;
 	padding: 10px;
 	opacity: 95%;
 	font-size: 12px;
 	border-radius: 0px 10px 10px 0px;
 }
+
+main .card-description p{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+main .small-card a{
+	justify-self: flex-end;
+	bottom: 5px;
+	text-decoration: none;
+	color: lightgray;
+	font-size: 8px;
+}
+
+main .small-card a:hover{
+	cursor: pointer;
+}
+
+
 
 
 
@@ -450,12 +516,6 @@ main .card-description{
 	main .card-description{
 		font-size: 12px;
 		padding: 10px 10px 10px 10px;
-	}
-}
-
-@media (max-width: 370px){
-	main .small-card{
-		width: 100%;
 	}
 }
 
